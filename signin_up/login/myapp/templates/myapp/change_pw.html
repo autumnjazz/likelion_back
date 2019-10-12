@@ -1,0 +1,17 @@
+<h1>change password</h1>
+
+
+<h1>로그인</h1>
+
+<form action ="" method="post">
+    {%csrf_token%}
+    <div>아이디</div>
+    <input type="text" name = "username">
+    <div>현재비밀번호</div>
+    <input type="password" name = "old_password">
+    <div>새로운비밀번호</div>
+    <input type="password" name = "new_password">
+    <div>새로운비밀번호확인</div>
+    <input type="password" name = "new_password_chk">
+    <div><input type="submit" value="변경하기"></div>
+</form>

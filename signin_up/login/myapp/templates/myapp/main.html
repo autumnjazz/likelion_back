@@ -1,0 +1,14 @@
+{%csrf_token%}
+
+<h1>Hello World</h1>
+
+{% if user.is_active %}
+<h2>{{user.username}}</h2>
+<h2><a href="{% url 'logout' %}">logout</a></h2>
+
+<h2><a href="{% url 'change_pw' %}">change password</a></h2>
+{% else %}
+<h2><a href="{% url 'signup' %}">signup</a></h2>
+<h2><a href="{% url 'signin' %}">signin</a></h2>
+{% endif %}
+<!--{% if msg %} <h2>{{msg}}</h2> {%endif%}-->
